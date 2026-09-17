@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 // parser.js
 // Simple markdown‑style parser that produces a lightweight AST.
 // Supported elements: document, heading, paragraph, list, listItem.
@@ -67,4 +64,4 @@ function parse(input) {
 }
 
 module.exports = { parse };
->>>>>>> a88869b (Add AST conflict resolution module)
+
