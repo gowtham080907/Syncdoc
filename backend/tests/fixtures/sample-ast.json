@@ -1,0 +1,135 @@
+{
+  "ast": {
+    "type": "document",
+    "children": [
+      {
+        "type": "heading",
+        "level": 1,
+        "children": [
+          { "type": "text", "text": "SyncDoc AST to PDF Engine" }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          { "type": "text", "text": "Welcome to the " },
+          {
+            "type": "bold",
+            "children": [
+              { "type": "text", "text": "SyncDoc Collaborative Document Platform" }
+            ]
+          },
+          { "type": "text", "text": ". This document demonstrates all supported AST nodes." }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          { "type": "text", "text": "Here is a paragraph with " },
+          {
+            "type": "italic",
+            "children": [
+              { "type": "text", "text": "italicized text" }
+            ]
+          },
+          { "type": "text", "text": ", " },
+          {
+            "type": "underline",
+            "children": [
+              { "type": "text", "text": "underlined text" }
+            ]
+          },
+          { "type": "text", "text": ", and a " },
+          {
+            "type": "link",
+            "href": "https://syncdoc.example.com",
+            "children": [
+              {
+                "type": "bold",
+                "children": [
+                  { "type": "text", "text": "hyperlink to SyncDoc" }
+                ]
+              }
+            ]
+          },
+          { "type": "text", "text": "." },
+          { "type": "lineBreak" },
+          { "type": "text", "text": "This text appears after a line break in the same paragraph." }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          { "type": "text", "text": "Supported List Formats" }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "children": [
+          {
+            "type": "listItem",
+            "children": [
+              { "type": "text", "text": "First bullet item" }
+            ]
+          },
+          {
+            "type": "listItem",
+            "children": [
+              { "type": "text", "text": "Second bullet item with " },
+              {
+                "type": "bold",
+                "children": [
+                  { "type": "text", "text": "bold detail" }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "start": 5,
+        "children": [
+          {
+            "type": "listItem",
+            "children": [
+              { "type": "text", "text": "Numbered item starting at 5" }
+            ]
+          },
+          {
+            "type": "listItem",
+            "children": [
+              { "type": "text", "text": "Numbered item starting at 6" }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "children": [
+          { "type": "text", "text": "Quotes & Code Blocks" }
+        ]
+      },
+      {
+        "type": "blockquote",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              { "type": "text", "text": "Conflict resolution in AST documents ensures all concurrent edits merge deterministically without loss of intention." }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "codeBlock",
+        "language": "javascript",
+        "children": [
+          { "type": "text", "text": "function exportPDF(ast) {\n  const ir = transformAST(ast);\n  return generatePDF(ir);\n}" }
+        ]
+      }
+    ]
+  }
+}
