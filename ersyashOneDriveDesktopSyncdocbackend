@@ -1,0 +1,13 @@
+[1mdiff --git a/package.json b/package.json[m
+[1mindex efdf7e7..f9c84c1 100644[m
+[1m--- a/package.json[m
+[1m+++ b/package.json[m
+[36m@@ -8,7 +8,7 @@[m
+     "start": "node src/server.js",[m
+     "dev": "nodemon src/server.js",[m
+     "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand --detectOpenHandles",[m
+[31m-    "test:security": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js tests/security.test.js --runInBand --detectOpenHandles"[m
+[32m+[m[32m    "test:security": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js tests/security.test.js tests/security.extra.test.js --runInBand --detectOpenHandles"[m
+   },[m
+   "keywords": [[m
+     "syncdoc",[m
