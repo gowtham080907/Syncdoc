@@ -1,0 +1,44 @@
+{
+  "name": "syncdoc-backend",
+  "version": "1.0.0",
+  "description": "Backend API service for Syncdoc collaborative document platform",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand --detectOpenHandles",
+    "test:security": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js tests/security.test.js tests/security.extra.test.js --runInBand --detectOpenHandles"
+  },
+  "keywords": [
+    "syncdoc",
+    "express",
+    "backend",
+    "api"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dompurify": "^3.4.15",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "helmet": "^8.3.0",
+    "jsdom": "^25.0.1",
+    "jsonwebtoken": "^9.0.3",
+    "pdfkit": "^0.20.2",
+    "ws": "^8.21.3",
+    "yjs": "^13.6.32"
+  },
+  "devDependencies": {
+    "@babel/core": "^8.0.6",
+    "@babel/preset-env": "^8.0.6",
+    "babel-jest": "^30.5.2",
+    "babel-plugin-transform-import-meta": "^3.0.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.4",
+    "pdf-parse": "^2.4.5",
+    "supertest": "^7.0.0"
+  }
+}

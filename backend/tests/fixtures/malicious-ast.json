@@ -1,0 +1,63 @@
+{
+  "ast": {
+    "type": "document",
+    "children": [
+      {
+        "type": "heading",
+        "level": 1,
+        "children": [
+          { "type": "text", "text": "Document with <script>alert('xss')</script>" }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          { "type": "text", "text": "This paragraph contains an " },
+          {
+            "type": "link",
+            "href": "javascript:alert('xss_link')",
+            "children": [
+              { "type": "text", "text": "Unsafe Link" }
+            ]
+          },
+          { "type": "text", "text": " and an inline malicious payload: <img src=x onerror=alert(1)>." }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "children": [
+          {
+            "type": "listItem",
+            "children": [
+              { "type": "text", "text": "List item with <iframe src=\"https://evil.example\"></iframe> payload" }
+            ]
+          },
+          {
+            "type": "listItem",
+            "children": [
+              { "type": "text", "text": "List item with <svg onload=\"alert('svg_xss')\"></svg> payload" }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "blockquote",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              { "type": "text", "text": "Quote containing <div onclick=\"alert(1)\">Dangerous Event Handler</div>" }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "codeBlock",
+        "language": "html",
+        "children": [
+          { "type": "text", "text": "const t = '<div>code snippet</div>';" }
+        ]
+      }
+    ]
+  }
+}
